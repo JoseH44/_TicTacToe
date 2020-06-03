@@ -1,14 +1,17 @@
 #ifndef JUEGO_H
 #define JUEGO_H
 
-#include <vector>
+#include <iostream>
 #include "Tablero.h"
 #include "Jugador.h"
+
+using std::cout;
+using std::endl;
 
 class Juego
 {
 	public:
-		Juego();
+		Juego(Jugador*,Jugador*);
 		~Juego();
 		
 		void iniciarPartida();
@@ -17,9 +20,13 @@ class Juego
 		void mostrarPuntuaciones();
 		void ImprimirJugadores();
 		
+		Jugador* getJugador1();
+		Jugador* getJugador2();
+		
 	protected:
 		Tablero* tablero;
-		vector <Jugador*> jugadores;
+		Jugador* jugador1;
+		Jugador* jugador2;
 
 };
 
