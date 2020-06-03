@@ -3,21 +3,23 @@
 
 #include <vector>
 #include "Tablero.h"
+#include "Jugador.h"
 
 class Juego
 {
 	public:
-		Juego(Tablero*);
+		Juego();
 		~Juego();
 		
 		void iniciarPartida();
 		bool validarGanador();
-		void elejirGanador();
+		Jugador* elejirGanador();
 		void mostrarPuntuaciones();
 		void ImprimirJugadores();
 		
 	protected:
 		Tablero* tablero;
+		vector <Jugador*> jugadores;
 
 };
 

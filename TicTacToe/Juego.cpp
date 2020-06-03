@@ -1,12 +1,15 @@
 #include "Juego.h"
 
-Juego::Juego(Tablero* tablero)
+Juego::Juego()
 {
-	this->tablero = tablero;
+	this->tablero = new Tablero ();
 }
 
 Juego::~Juego()
 {
 	delete tablero;
 	
+	for (int i = 0; i < jugadores.size(); i++){
+		delete jugadores[i];
+	}
 }

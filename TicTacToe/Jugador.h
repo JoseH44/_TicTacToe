@@ -13,8 +13,7 @@ class Jugador
 		int puntos;
 		Char* marca;
 	public:
-		Jugador();
-		Jugador(string,int,char);//constructor sobrecargado
+		Jugador(string,int,Char*);//constructor sobrecargado
 		~Jugador();
 		//setter y getter de nombre
 		string getNombre();

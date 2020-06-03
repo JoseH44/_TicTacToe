@@ -5,7 +5,7 @@
 class JugadorHumano : public Jugador
 {
 	public:
-		JugadorHumano();
+		JugadorHumano(string,int,Char*);
 		~JugadorHumano();
 	protected:
 };

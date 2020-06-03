@@ -1,6 +1,6 @@
 #include "JugadorHumano.h"
 
-JugadorHumano::JugadorHumano()
+JugadorHumano::JugadorHumano(string nombre, int puntos, Char* marca):Jugador(nombre,puntos,marca)
 {
 }
 
