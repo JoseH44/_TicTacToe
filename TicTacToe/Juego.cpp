@@ -30,8 +30,14 @@ void Juego::ImprimirJugadores(){
 
 void Juego::mostrarPuntuaciones()
 {
-	cout << "Puntos Jugador #1: " << this->jugador1 ->getPuntos() << endl
+	cout << endl << "Puntos Jugador #1: " << this->jugador1 ->getPuntos() << endl
 	<< "Puntos Jugador #2: " << this->jugador2->getPuntos() << endl;
+}
+
+bool Juego::validarGanador(){
+	if (this->tablero->getCasilla(0,0) == this->jugador1->getMarca()){
+		return true;
+	}
 }
 
 void Juego::iniciarPartida(){
@@ -46,6 +52,11 @@ void Juego::iniciarPartida(){
 		}
 		
 		cout << endl;
+		
+		if(validarGanador() == true){
+			mostrarPuntuaciones();
+		}
+		
 	}
 }
 

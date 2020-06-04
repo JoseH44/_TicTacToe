@@ -6,7 +6,7 @@ using std::endl;
 
 Tablero::Tablero(){
 	size=3;
-	matriz = new Casilla**[size];
+	matriz = new Casilla **[size];
 	
 	for(int i = 0;i<size;i++){
 		matriz[i] = new Casilla*[size];
@@ -56,6 +56,10 @@ void Tablero::printTablero(){
 		cout<<"|"<<endl;
 	}
 		
+}
+
+char Tablero::getCasilla(int i, int j){
+	return this->matriz[i][j]->getValue();
 }
 		
 
