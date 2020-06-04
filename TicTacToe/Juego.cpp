@@ -14,11 +14,6 @@ Juego::~Juego()
 	delete jugador2;
 }
 
-void Juego::mostrarPuntuaciones()
-{
-	cout << "Puntos Jugador #1: " << this->jugador1 ->getPuntos() << endl
-	<< "Puntos Jugador #2: " << this->jugador2->getPuntos() << endl;
-}
 
 Jugador* Juego::getJugador1(){
 	return this->jugador1;
@@ -32,3 +27,25 @@ void Juego::ImprimirJugadores(){
 	cout << "Jugador #1: " << this->jugador1 ->getNombre() << endl
 	<< "Jugador #2: " << this->jugador2 ->getNombre() << endl;
 }
+
+void Juego::mostrarPuntuaciones()
+{
+	cout << "Puntos Jugador #1: " << this->jugador1 ->getPuntos() << endl
+	<< "Puntos Jugador #2: " << this->jugador2->getPuntos() << endl;
+}
+
+void Juego::iniciarPartida(){
+	int turno = 1, i ,j;
+	while(validarGanador()){
+		if (turno % 2 == 0){
+			
+			
+			
+		} else {
+			
+		}
+		
+		cout << endl;
+	}
+}
+

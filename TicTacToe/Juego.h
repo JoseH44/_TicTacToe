@@ -6,6 +6,7 @@
 #include "Jugador.h"
 
 using std::cout;
+using std::cin;
 using std::endl;
 
 class Juego
