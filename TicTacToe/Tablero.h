@@ -11,10 +11,12 @@ class Tablero
 		bool marcarCasilla(int,int,char);
 		void printTablero();
 		
+		char getCasilla(int,int);
+		
 		~Tablero();
 	protected:
 		//matriz de apuntadores a casillas
-		Casilla*** matriz; 
+		Casilla* ** matriz; 
 		int size;
 };
 
