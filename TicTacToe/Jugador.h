@@ -2,18 +2,19 @@
 #define JUGADOR_H
 
 #include "Char.h"
+#include "Tablero.h"
 
 #include <string>
 using std::string;
 
 class Jugador
 {
-	private:
+	protected:
 		string nombre;
 		int puntos;
 		Char* marca;
 	public:
-		Jugador(string,int,Char*);//constructor sobrecargado
+		Jugador(string,Char*);//constructor sobrecargado
 		~Jugador();
 		//setter y getter de nombre
 		string getNombre();
@@ -25,7 +26,7 @@ class Jugador
 		Char* getMarca();
 		void setMarca(Char*);
 		
-		virtual void elegirCasilla(int,int)=0;
+		virtual void elegirCasilla(int&,int&,Tablero*)=0;
 		void realizarJugada();
 		
 	
