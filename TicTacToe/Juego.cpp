@@ -34,11 +34,6 @@ void Juego::mostrarPuntuaciones()
 	<< "Puntos Jugador #2: " << this->jugador2->getPuntos() << endl;
 }
 
-bool Juego::validarGanador(){
-	if (this->tablero->getCasilla(0,0) == this->jugador1->getMarca()){
-		return true;
-	}
-}
 
 void Juego::iniciarPartida(){
 	int turno = 1, i ,j;
@@ -60,3 +55,48 @@ void Juego::iniciarPartida(){
 	}
 }
 
+
+bool Juego::validarGanador(){
+	// Linear Horizontales
+	if (this->tablero->getCasilla(0,0) == this->jugador1->getMarca() && this->tablero->getCasilla(0,1) == this->jugador1->getMarca() && this->tablero->getCasilla(0,2) == this->jugador1->getMarca()){
+		return true;	
+	}
+	if (this->tablero->getCasilla(1,0) == this->jugador1->getMarca() && this->tablero->getCasilla(1,1) == this->jugador1->getMarca() && this->tablero->getCasilla(1,2) == this->jugador1->getMarca()){
+		return true;
+	}
+	if (this->tablero->getCasilla(2,0) == this->jugador1->getMarca() && this->tablero->getCasilla(2,1) == this->jugador1->getMarca() && this->tablero->getCasilla(2,2) == this->jugador1->getMarca()){
+		return true;
+	}
+	
+	if (this->tablero->getCasilla(0,0) == this->jugador2->getMarca() && this->tablero->getCasilla(0,1) == this->jugador2->getMarca() && this->tablero->getCasilla(0,2) == this->jugador2->getMarca()){
+		return true;	
+	}
+	if (this->tablero->getCasilla(1,0) == this->jugador2->getMarca() && this->tablero->getCasilla(1,1) == this->jugador2->getMarca() && this->tablero->getCasilla(1,2) == this->jugador2->getMarca()){
+		return true;
+	}
+	if (this->tablero->getCasilla(2,0) == this->jugador2->getMarca() && this->tablero->getCasilla(2,1) == this->jugador2->getMarca() && this->tablero->getCasilla(2,2) == this->jugador2->getMarca()){
+		return true;
+	}
+	
+	//Lineas Verticales
+	if (this->tablero->getCasilla(0,0) == this->jugador1->getMarca() && this->tablero->getCasilla(1,0) == this->jugador1->getMarca() && this->tablero->getCasilla(2,0) == this->jugador1->getMarca()){
+		return true;	
+	}
+	if (this->tablero->getCasilla(0,1) == this->jugador1->getMarca() && this->tablero->getCasilla(1,1) == this->jugador1->getMarca() && this->tablero->getCasilla(2,1) == this->jugador1->getMarca()){
+		return true;
+	}
+	if (this->tablero->getCasilla(0,2) == this->jugador1->getMarca() && this->tablero->getCasilla(1,2) == this->jugador1->getMarca() && this->tablero->getCasilla(2,2) == this->jugador1->getMarca()){
+		return true;
+	}
+	
+	if (this->tablero->getCasilla(0,0) == this->jugador2->getMarca() && this->tablero->getCasilla(1,0) == this->jugador2->getMarca() && this->tablero->getCasilla(2,0) == this->jugador2->getMarca()){
+		return true;	
+	}
+	if (this->tablero->getCasilla(0,1) == this->jugador2->getMarca() && this->tablero->getCasilla(1,1) == this->jugador2->getMarca() && this->tablero->getCasilla(2,1) == this->jugador2->getMarca()){
+		return true;
+	}
+	if (this->tablero->getCasilla(0,2) == this->jugador2->getMarca() && this->tablero->getCasilla(1,2) == this->jugador2->getMarca() && this->tablero->getCasilla(2,2) == this->jugador2->getMarca()){
+		return true;
+	}
+	
+}
