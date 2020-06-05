@@ -1,7 +1,7 @@
 #ifndef JUGADOR_H
 #define JUGADOR_H
 
-#include "Char.h"
+
 #include "Tablero.h"
 
 #include <string>
@@ -12,10 +12,10 @@ class Jugador
 	protected:
 		string nombre;
 		int puntos;
-		Char* marca;
+		char marca;
 	public:
-		Jugador(string,Char*);//constructor sobrecargado
-		~Jugador();
+		Jugador();//constructor sobrecargado
+		Jugador(string,char);
 		//setter y getter de nombre
 		string getNombre();
 		void setNombre(string);
@@ -23,11 +23,11 @@ class Jugador
 		int getPuntos();
 		void setPuntos(int);
 		//setter y getter de marca
-		Char* getMarca();
-		void setMarca(Char*);
+		char getMarca();
+		void setMarca(char);
 		
 		virtual void elegirCasilla(int&,int&,Tablero*)=0;
-		void realizarJugada();
+		virtual void realizarJugada(int,int,Tablero*)=0;
 		
 	
 };

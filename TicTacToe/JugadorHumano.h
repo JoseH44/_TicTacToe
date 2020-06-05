@@ -6,8 +6,11 @@
 class JugadorHumano : public Jugador
 {
 	public:
-		JugadorHumano(string,Char*);
+		JugadorHumano(string,char);
 		JugadorHumano();
+		void elegirCasilla(int&,int&,Tablero*);
+		void realizarJugada(int,int,Tablero*);
+		
 		~JugadorHumano();
 	protected:
 };

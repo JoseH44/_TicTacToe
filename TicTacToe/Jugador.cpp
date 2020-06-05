@@ -1,7 +1,11 @@
 #include "Jugador.h"
 
-Jugador::Jugador(string nombre,Char* marca)
-{
+
+
+Jugador::Jugador(){
+}
+
+Jugador::Jugador(string nombre,char marca){
 	this->nombre = nombre;
 	this->puntos = 0;
 	this->marca = marca;
@@ -24,21 +28,16 @@ void Jugador::setPuntos(int pPuntos){
 	puntos = pPuntos;
 }
 
-Char* Jugador::getMarca(){
-	return (marca->getChar());
+char Jugador::getMarca(){
+	return (marca);
 }
 
-void Jugador::setMarca(Char* pMarca){
+void Jugador::setMarca(char pMarca){
 	marca = pMarca;
 }
 
 
-void Jugador::realizarJugada(){
-	
-}
 
 
-Jugador::~Jugador()
-{
-	delete this->marca;
-}
+
+
