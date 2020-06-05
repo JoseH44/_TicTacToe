@@ -4,6 +4,7 @@
 #include <iostream>
 #include "Tablero.h"
 #include "Jugador.h"
+#include "JugadorHumano.h"
 
 using std::cout;
 using std::cin;

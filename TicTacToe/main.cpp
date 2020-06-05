@@ -1,24 +1,19 @@
 #include <iostream>
 using std::cout;
+using std::cin;
+using std::endl;
 
-/* run this program using the console pauser or add your own getch, system("pause") or input loop */
 #include "Tablero.h"
+#include "Juego.h"
 
 
 
 int main(int argc, char** argv) {
-	//apuntadores
-	Tablero* tablero = new Tablero();
+	string nombreJ1,nombreJ2;
 	
+	cout << "Ingrese nombre de jugador #1: "; cin >> nombreJ1;
+	cout << "Ingrese nombre de jugador #2: "; cin >> nombreJ2;
 	
-	if(!tablero->marcarCasilla(0,0,'X')){
-		cout<<"Casilla Incorrecta\n";
-	}
-	if(!tablero->marcarCasilla(0,0,'X')){
-		cout<<"Casilla Incorrecta\n";
-	}
-	
-	tablero->printTablero();
-	
-	delete tablero;
+	Juego* juego = new Juego(new JugadorHumano(nombreJ1,'X'), new JugadorHumano(nombreJ2,'O'));
+	juego->iniciarPartida();
 }
