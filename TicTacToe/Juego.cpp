@@ -51,16 +51,33 @@ void Juego::iniciarPartida(){
 		cout << endl;
 		turno++;
 		
-		validarGanador();
-		if(validarGanador() == true){
+		if(validarGanador()){
 			cout << "El ganador es: " << elejirGanador()->getNombre() << endl;
 			this->tablero -> printTablero();
 			break;
+		} else {
+			if (Empate()){
+				cout << "Hay empate!" << endl;
+				this->tablero -> printTablero();
+				break;
+			}
+			
 		}
 		
 	}
 }
 
+bool Juego::Empate(){
+	for (int i = 0; i < 3; i++){
+		for (int j = 0; j < 3; j++){
+			if (this->tablero->getCasilla(i,j) == ' '){
+				return false;
+			}
+		}
+	}
+	
+	return true;
+}
 
 bool Juego::validarGanador(){
 	// lineas horizontales

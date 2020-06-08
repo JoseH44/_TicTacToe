@@ -37,15 +37,15 @@ CursorRow=9
 TopLine=1
 LeftChar=1
 [Editor_7]
-CursorCol=10
-CursorRow=31
+CursorCol=9
+CursorRow=21
 TopLine=1
 LeftChar=1
 [Editor_8]
 <<<<<<< HEAD
-CursorCol=24
-CursorRow=178
-TopLine=142
+CursorCol=11
+CursorRow=62
+TopLine=33
 =======
 CursorCol=16
 CursorRow=83

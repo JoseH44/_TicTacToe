@@ -18,6 +18,7 @@ class Juego
 		
 		void iniciarPartida();
 		bool validarGanador();
+		bool Empate();
 		Jugador* elejirGanador();
 		void mostrarPuntuaciones();
 		void ImprimirJugadores();
